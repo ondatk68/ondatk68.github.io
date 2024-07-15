@@ -213,7 +213,8 @@ a:hover {
 
     main {
         margin-left: 0;
-        width: calc(100% - 140px); /* Adjust this value based on the sidebar width */
+        width: calc(100% - 40px); /* Adjust this value based on the sidebar width */
+        padding: 20px;
     }
 
     .content-container {
