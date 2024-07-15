@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 40px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center; /* 水平方向に中央揃え */
+    align-items: center; /* 垂直方向に中央揃え */
+    height: 100%; /* ヘッダーの高さいっぱいに設定 */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s, border-bottom-color 0.3s; /* 下線の色もトランジションさせる */
+    border-bottom: 2px solid transparent; /* デフォルトの下線を透明にする */
+}
+
+.index-page nav ul li:nth-child(1) a {
+    font-weight: bold;
+    border-bottom-color: #fff;
+}
+
+/* research.htmlの場合のスタイル */
+.research-page nav ul li:nth-child(2) a {
+    font-weight: bold;
+    border-bottom-color: #fff;
+}
+
+/* hobbies.htmlの場合のスタイル */
+.hobbies-page nav ul li:nth-child(3) a {
+    font-weight: bold;
+    border-bottom-color: #fff;
+}
+
+nav ul li a:hover{
+    border-bottom-color: #fff; /* ホバー時とフォーカス時の下線の色 */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px; /* ヘッダーの高さを考慮して調整 */
+}
+
+.sidebar {
+    width: 270px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: fixed;
+    height: calc(100% - 60px); /* ヘッダーの高さを考慮 */
+    top: 60px; /* ヘッダーの高さを考慮 */
+    left: 0;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.profile-name {
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.profile-description {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.social-icons {
+    text-align: center;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 10px;
+}
+
+.social-icons img {
+    width: 40px; /* 画像のサイズに合わせて調整 */
+    height: 40px;
+    border-radius: 0%; /* 丸い形状にする場合 */
+    transition: transform 0.3s ease-in-out; /* ホバーエフェクトの設定 */
+}
+
+.social-icons img:hover {
+    transform: scale(1.2); /* ホバー時の拡大エフェクト */
+}
+
+
+main {
+    margin-left: 310px; /* Adjust this value based on the sidebar width */
+    padding: 50px;
+    padding-top: 20px;
+    width: calc(100% - 310px); /* Adjust this value based on the sidebar width */
+}
+
+.content-container {
+    max-width: 1200px; /* Adjust this value based on your preference */
+    margin: 0 auto;
+    text-align: left;
+}
+
+.content-container section {
+    margin-bottom: 40px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1000;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin-top: 60px; /* ヘッダーの高さを考慮して調整 */
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 0; /* ヘッダーの高さを考慮 */
+    }
+
+    main {
+        margin-left: 0;
+        width: calc(100% - 100px + 40px); /* Adjust this value based on the sidebar width */
+    }
+
+    .content-container {
+        padding: 0 20px;
+    }
+}
