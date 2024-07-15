@@ -170,6 +170,21 @@ main {
     margin-top: 0px;
 }
 
+.timeline-text {
+    font-weight: bold;
+    color: #333; /* タイトルの色 */
+}
+
+.timeline-authors, .timeline-conference {
+    color: #666; /* 著者と会議名の色 */
+    margin-top: 5px;
+}
+.highlighted-author {
+    color: #666; /* 強調する色 */
+    font-weight: bold;
+    text-decoration: underline; /* 下線を追加 */
+}
+
 footer {
     background: #333;
     color: #fff;
@@ -219,5 +234,9 @@ a:hover {
 
     .content-container {
         padding: 0 20px;
+    }
+
+    footer{
+        position: relative;
     }
 }
