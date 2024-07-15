@@ -76,6 +76,7 @@ nav ul li a:hover{
     width: 270px;
     background-color: #fff;
     padding: 20px;
+    /* padding-top: 30px; */
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     position: fixed;
     height: calc(100% - 60px); /* ヘッダーの高さを考慮 */
@@ -128,7 +129,7 @@ nav ul li a:hover{
 
 main {
     margin-left: 310px; /* Adjust this value based on the sidebar width */
-    padding: 50px;
+    padding: 70px;
     padding-top: 20px;
     width: calc(100% - 310px); /* Adjust this value based on the sidebar width */
 }
@@ -143,6 +144,35 @@ main {
     margin-bottom: 40px;
 }
 
+.timeline {
+    margin-top: 20px;
+}
+
+.timeline-item {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-left: 2px solid #333; /* 線の色 */
+}
+
+.timeline-content {
+    margin-left: 15px;
+}
+
+.timeline-text {
+    font-weight: bold;
+    color: #333; /* 日付の色 */
+}
+
+.timeline-date {
+    color: #666; /* 内容の色 */
+    margin-top: 5px;
+}
+
+.timeline-description {
+    color: #555;
+    margin-top: 0px;
+}
+
 footer {
     background: #333;
     color: #fff;
@@ -154,6 +184,22 @@ footer {
     z-index: 1000;
 }
 
+footer p {
+    margin: 5px;
+}
+
+/* 通常のリンクスタイル */
+a {
+    color: #007bff; /* リンクの色 */
+    text-decoration: none; /* 下線を消す */
+    transition: color 0.3s; /* 色の変化にトランジションを追加 */
+}
+
+a:hover {
+    color: #0056b3; /* ホバー時のリンクの色 */
+}
+
+
 /* Responsive design */
 @media (max-width: 768px) {
     .container {
@@ -163,14 +209,14 @@ footer {
 
     .sidebar {
         position: relative;
-        width: 100%;
+        width: calc(100% - 40px);
         height: auto;
         top: 0; /* ヘッダーの高さを考慮 */
     }
 
     main {
         margin-left: 0;
-        width: calc(100% - 100px + 40px); /* Adjust this value based on the sidebar width */
+        width: calc(100% - 140px); /* Adjust this value based on the sidebar width */
     }
 
     .content-container {
