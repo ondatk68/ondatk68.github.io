@@ -239,4 +239,14 @@ a:hover {
     footer{
         position: relative;
     }
+    
+    /* あとで消す */
+    .hobbies-page .container{
+        position: relative;
+        min-height: 100%;
+    }
+    .hobbies-page footer{
+        position: absolute;
+        bottom: 0;
+    }
 }
