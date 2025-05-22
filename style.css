@@ -117,6 +117,7 @@ nav ul li a:hover{
     height: 40px;
     border-radius: 0%; /* 丸い形状にする場合 */
     transition: transform 0.3s ease-in-out; /* ホバーエフェクトの設定 */
+    filter: brightness(0);
 }
 
 .social-icons img:hover {
