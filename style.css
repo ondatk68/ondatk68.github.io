@@ -38,7 +38,12 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 20px;
+}
+@media (max-width: 768px) {
+    nav ul li {
+        margin: 0 10px; /* スマホでは10pxに変更 */
+    }
 }
 
 nav ul li a {
