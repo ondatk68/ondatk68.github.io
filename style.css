@@ -10,22 +10,25 @@ body {
 header {
     background: #333;
     color: #fff;
-    padding: 10px 0;
-    text-align: center;
+    padding: 10px 0; /* 左右に余白を追加 */
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     height: 40px;
+    display: flex; /* フレックスボックスを使用 */
+    justify-content: center; /* 中央揃え */
+    align-items: center; /* 垂直方向に中央揃え */
+    position: fixed; 
 }
-
 
 nav {
     display: flex;
-    justify-content: center; /* 水平方向に中央揃え */
-    align-items: center; /* 垂直方向に中央揃え */
-    height: 100%; /* ヘッダーの高さいっぱいに設定 */
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
 }
+
 
 nav ul {
     list-style: none;
@@ -43,6 +46,25 @@ nav ul li a {
     text-decoration: none;
     transition: color 0.3s, border-bottom-color 0.3s; /* 下線の色もトランジションさせる */
     border-bottom: 2px solid transparent; /* デフォルトの下線を透明にする */
+}
+
+.language-switcher {
+    position: absolute; /* 絶対位置で右端に配置 */
+    right: 20px; /* 右端からの余白 */
+    font-size: 14px;
+    color: #fff;
+}
+
+.language-switcher .lang-link {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s, border-bottom-color 0.3s; /* navと同じトランジションを適用 */
+    border-bottom: 2px solid transparent; /* デフォルトの下線を透明にする */
+    margin: 0 5px;
+}
+
+.language-switcher .lang-link:hover {
+    color: #ccc; /* ホバー時の色 */
 }
 
 .index-page nav ul li:nth-child(1) a {
