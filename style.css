@@ -192,13 +192,14 @@ main {
 
 /* ▼矢印 */
 .timeline-toggle::before {
-    content: "▾";
+    content: "\25BC";
+    font-size: 0.75em;
     margin-right: 8px;
     color: #666;
 }
 
 .timeline-toggle.closed::before {
-    content: "▸";
+    content: "\25B6";
 }
 
 .timeline-item {
