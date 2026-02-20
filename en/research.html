@@ -25,38 +25,38 @@
             <div class="content-container">
                 <section id="papers">
                     <h1>PUBLICATIONS</h1>
-                    <h3>Peer-Reviewed International Conferences</h3>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <div class="timeline-text">Phonological Tokenizer: Prosody-Aware Phonetic Token via Multi-Objective Fine-Tuning with Differentiable K-Means</a></div>
-                                <div class="timeline-authors"><span class="highlighted-author">Kentaro Onda</span>, Hayato Futami, Yosuke Kashiwagi, Emiru Tsunoo, Shinji Watanabe</div>
-                                <div class="timeline-conference">
-                                    ICASSP2026 (Accepted)
-                                    [<a href="https://arxiv.org/abs/2601.19781" target="_blank">arXiv</a>]
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <div class="timeline-text">Advanced Modeling of Interlanguage Speech Intelligibility Benefit with L1-L2 Multi-Task Learning Using Differentiable K-Means for Accent-Robust Discrete Token-Based ASR</a></div>
-                                <div class="timeline-authors"><span class="highlighted-author">Kentaro Onda</span>, Satoru Fukayama, Daisuke Saito, Nobuaki Minematsu</div>
-                                <div class="timeline-conference">
-                                    ICASSP2026 (Accepted)
-                                    [<a href="https://arxiv.org/abs/2601.19767" target="_blank">arXiv</a>]
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <div class="timeline-text">Benchmarking Prosody Encoding in Discrete Speech Tokens</a></div>
-                                <div class="timeline-authors"><span class="highlighted-author">Kentaro Onda</span>, Satoru Fukayama, Daisuke Saito, Nobuaki Minematsu</div>
-                                <div class="timeline-conference">
-                                    ASRU2025
-                                    [<a href="https://arxiv.org/abs/2508.11224" target="_blank">arXiv</a>]
-                                </div>
-                            </div>
-                        </div>
+                    <h3 class="timeline-toggle">Peer-Reviewed International Conferences</h3>
                         <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <div class="timeline-text">Phonological Tokenizer: Prosody-Aware Phonetic Token via Multi-Objective Fine-Tuning with Differentiable K-Means</a></div>
+                                    <div class="timeline-authors"><span class="highlighted-author">Kentaro Onda</span>, Hayato Futami, Yosuke Kashiwagi, Emiru Tsunoo, Shinji Watanabe</div>
+                                    <div class="timeline-conference">
+                                        ICASSP2026 (Accepted)
+                                        [<a href="https://arxiv.org/abs/2601.19781" target="_blank">arXiv</a>]
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <div class="timeline-text">Advanced Modeling of Interlanguage Speech Intelligibility Benefit with L1-L2 Multi-Task Learning Using Differentiable K-Means for Accent-Robust Discrete Token-Based ASR</a></div>
+                                    <div class="timeline-authors"><span class="highlighted-author">Kentaro Onda</span>, Satoru Fukayama, Daisuke Saito, Nobuaki Minematsu</div>
+                                    <div class="timeline-conference">
+                                        ICASSP2026 (Accepted)
+                                        [<a href="https://arxiv.org/abs/2601.19767" target="_blank">arXiv</a>]
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <div class="timeline-text">Benchmarking Prosody Encoding in Discrete Speech Tokens</a></div>
+                                    <div class="timeline-authors"><span class="highlighted-author">Kentaro Onda</span>, Satoru Fukayama, Daisuke Saito, Nobuaki Minematsu</div>
+                                    <div class="timeline-conference">
+                                        ASRU2025
+                                        [<a href="https://arxiv.org/abs/2508.11224" target="_blank">arXiv</a>]
+                                    </div>
+                                </div>
+                            </div>
                             <div class="timeline-item">
                                 <div class="timeline-content">
                                     <div class="timeline-text">Discrete Tokens Exhibit Interlanguage Speech Intelligibility Benefit: an Analytical Study Towards Accent-robust ASR Only with Native Speech Data</a></div>
@@ -102,8 +102,8 @@
                                 </div>
                             </div>
                         </div>
-                    <h3>Non-peer-reviewed Domestic Conferences</h3>
-                    <div class="timeline">
+                    <h3 class="timeline-toggle closed">Non-peer-reviewed Domestic Conferences</h3>
+                    <div class="timeline closed">
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-text">Probabilistic Use of Discrete Speech Tokens Derived from SSL Models for Downstream Task Inference</div>
@@ -168,8 +168,8 @@
                             </div>
                         </div>
                     </div>
-                    <h3>Abstract-reviewed Conferences (no proceedings)</h3>
-                    <div class="timeline">
+                    <h3 class="timeline-toggle closed">Abstract-reviewed Conferences (no proceedings)</h3>
+                    <div class="timeline closed">
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-text">Simulation of Foreign Accentuation by Discrete Symbol-based Resynthesis Using Only Native Speech Corpora</div>
@@ -204,7 +204,7 @@
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">Dec. 2025</div>
-                                <div class="timeline-text">Encouragement Award in Spoken Language Processing and Natural Language Processing Symposium (Special Session)</div>
+                                <div class="timeline-text">Encouragement Award in Spoken Language Processing and Natural Language Processing Symposium</div>
                             </div>
                         </div>
                         <div class="timeline-item">
@@ -233,6 +233,16 @@
     <footer>
         <p>&copy; 2024 Kentaro Onda</p>
     </footer>
+    <script>
+    document.querySelectorAll(".timeline-toggle").forEach(toggle => {
+        const timeline = toggle.nextElementSibling;
+
+        toggle.addEventListener("click", () => {
+            timeline.classList.toggle("closed");
+            toggle.classList.toggle("closed");
+        });
+    });
+    </script>
 </body>
 </html>
 

@@ -25,7 +25,7 @@
             <div class="content-container">
                 <section id="papers">
                     <h1>発表文献</h1>
-                    <h3>国際会議</h3>
+                    <h3 class="timeline-toggle">国際会議</h3>
                         <div class="timeline">
                             <div class="timeline-item">
                                 <div class="timeline-content">
@@ -102,8 +102,8 @@
                                 </div>
                             </div>
                         </div>
-                    <h3>国内会議</h3>
-                    <div class="timeline">
+                    <h3 class="timeline-toggle closed">国内会議</h3>
+                    <div class="timeline closed">
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-text">下流タスク推論時におけるSSLモデル由来の音声離散トークンの確率分布的利用</div>
@@ -168,8 +168,8 @@
                             </div>
                         </div>
                     </div>
-                    <h3>その他</h3>
-                    <div class="timeline">
+                    <h3 class="timeline-toggle closed">その他</h3>
+                    <div class="timeline closed">
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-text">Simulation of Foreign Accentuation by Discrete Symbol-based Resynthesis Using Only Native Speech Corpora</div>
@@ -204,7 +204,7 @@
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">2025/12</div>
-                                <div class="timeline-text">第27回音声言語シンポジウム・第12回自然言語処理シンポジウム奨励賞（特別セッション）</a></div>
+                                <div class="timeline-text">第27回音声言語シンポジウム・第12回自然言語処理シンポジウム奨励賞</a></div>
                             </div>
                         </div>
                         <div class="timeline-item">
@@ -233,6 +233,16 @@
     <footer>
         <p>&copy; 2024 Kentaro Onda</p>
     </footer>
+    <script>
+    document.querySelectorAll(".timeline-toggle").forEach(toggle => {
+        const timeline = toggle.nextElementSibling;
+
+        toggle.addEventListener("click", () => {
+            timeline.classList.toggle("closed");
+            toggle.classList.toggle("closed");
+        });
+    });
+    </script>
 </body>
 </html>
 

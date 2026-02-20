@@ -169,8 +169,37 @@ main {
     margin-bottom: 40px;
 }
 
+/* .timeline {
+    margin-top: 20px;
+} */
 .timeline {
     margin-top: 20px;
+    overflow: hidden;
+    max-height: 2000px; /* 開いた状態 */
+    transition: max-height 0.35s ease;
+}
+
+.timeline.closed {
+    max-height: 0;
+}
+
+/* 見出しクリック可能に */
+.timeline-toggle {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+/* ▼矢印 */
+.timeline-toggle::before {
+    content: "▼";
+    font-size: 0.75em;
+    margin-right: 8px;
+    color: #666;
+}
+
+.timeline-toggle.closed::before {
+    content: "▶";
 }
 
 .timeline-item {
